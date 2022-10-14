@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import "./css/App.css";
 import ScrollToTop from "./components/ScrollToTop";
+//import IndexNavbar from "./components/IndexNavbar.js";
+//import Partners from "./components/Partners";
 
 function App() {
   const partners = useRef(null);
@@ -18,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <ScrollToTop />
+      
       <div className="hero">
         <ul>
         <li onClick={() => scrollToSection(partners)} className="link">
@@ -36,6 +39,7 @@ function App() {
       </div>
       <div ref={partners} className="partners">
         <h3>Partners</h3>
+        
       </div>
       <div ref={services} className="services">
         <h3>Services</h3>
@@ -46,6 +50,7 @@ function App() {
       <div ref={contact} className="contact">
         <h3>Contact</h3>
       </div>
+      
     </div>
   );
 }
